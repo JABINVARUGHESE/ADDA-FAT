@@ -27,8 +27,8 @@ pipeline {
             steps {
                 // Push Docker image to the central Docker repository
                 withCredentials([usernamePassword(credentialsId: 'JABINMIC0051', passwordVariable: 'Jabin11/12', usernameVariable: 'JABINVARUGHESE')]) {
-                    sh "docker login -u ${jabinvarughese} -p ${Jabin11/12}"
-                    sh 'docker push your-docker-image-name'
+                    bat "start docker login -u ${jabinvarughese} -p ${Jabin11/12}"
+                    bat 'start docker push your-docker-image-name'
                 }
             }
         }
